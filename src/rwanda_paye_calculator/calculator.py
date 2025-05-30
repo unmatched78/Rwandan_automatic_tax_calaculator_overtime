@@ -13,3 +13,6 @@ MONTHLY_BRACKETS = [
     (100_000, 200_000, 0.20),
     (200_000, float('inf'), 0.30),
 ]
+
+ANNUAL_BRACKETS = [(low*12, high*12 if high != float('inf') else float('inf'), rate)
+                   for (low, high, rate) in MONTHLY_BRACKETS]
